@@ -1,0 +1,44 @@
+unit uIzvodjacSignIn;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Objects,
+  FMX.StdCtrls, FMX.Edit, FMX.Controls.Presentation, FMX.Layouts;
+
+type
+  TFrmIzvodjacSignIn = class(TForm)
+    Layout1: TLayout;
+    Text1: TText;
+    Text2: TText;
+    Layout2: TLayout;
+    Rectangle3: TRectangle;
+    Text3: TText;
+    Linput: TLayout;
+    reUsername: TRectangle;
+    lineUsername: TLine;
+    lbUsername: TLabel;
+    edUsername: TEdit;
+    rePassword: TRectangle;
+    linePassword: TLine;
+    lbPassword: TLabel;
+    edPassword: TEdit;
+    cbShowPassword: TCheckBox;
+    btLogin: TButton;
+    lbGoToKorisnikSignUp: TLabel;
+    Image2: TImage;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmIzvodjacSignIn: TFrmIzvodjacSignIn;
+
+implementation
+
+{$R *.fmx}
+
+end.

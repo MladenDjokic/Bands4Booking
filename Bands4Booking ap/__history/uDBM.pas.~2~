@@ -1,0 +1,45 @@
+unit uDBM;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf, FireDAC.Stan.Def,
+  FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.FMXUI.Wait,
+  FireDAC.Stan.Param, FireDAC.DatS, FireDAC.DApt.Intf, FireDAC.DApt,
+  FireDAC.Phys.MySQLDef, FireDAC.Phys.SQLite, FireDAC.Phys.MySQL,
+  FireDAC.Comp.Client, Data.DB, FireDAC.Comp.DataSet, FireDAC.Phys.SQLiteDef,
+  FireDAC.Stan.ExprFuncs, FireDAC.Phys.SQLiteWrapper.Stat;
+
+type
+  Tdata = class(TDataModule)
+    FDConnection1: TFDConnection;
+    FDMemTable1: TFDMemTable;
+    FDTable1: TFDTable;
+    FDPhysMySQLDriverLink1: TFDPhysMySQLDriverLink;
+    FDSQLiteSecurity1: TFDSQLiteSecurity;
+  private
+    { Private declarations }
+
+    procedure initdatabase;
+  public
+    { Public declarations }
+  end;
+
+  CONST
+  DB_FILENAME = 'bands4bookingdp  .db3';
+  DB_PASSWORD = 'ovojesifra321';
+  DB_ENCRYPTION = 'aes-256';
+  DB_TABLE = 'users';
+
+
+var
+  data: Tdata;
+
+implementation
+
+{%CLASSGROUP 'FMX.Controls.TControl'}
+
+{$R *.dfm}
+
+end.

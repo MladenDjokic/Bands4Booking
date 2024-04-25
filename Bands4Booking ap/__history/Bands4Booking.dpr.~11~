@@ -1,0 +1,23 @@
+program Bands4Booking;
+
+uses
+  System.StartUpCopy,
+  FMX.Forms,
+  uIntro in 'uIntro.pas' {FrmIntro},
+  uIzbor in 'uIzbor.pas' {FrmIzbor},
+  uKorisnikSignIn in 'uKorisnikSignIn.pas' {FrmKorisnikSignIn},
+  uDBM in 'uDBM.pas' {data: TDataModule},   //error
+  uKorisnikMain in 'uKorisnikMain.pas' {FrmKorisnikMain},
+  uDM in 'uDM.pas' {dm: TDataModule};    //error
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(Tdm, dm);
+  Application.CreateForm(TFrmIntro, FrmIntro);
+  Application.CreateForm(TFrmIzbor, FrmIzbor);
+  Application.CreateForm(TFrmKorisnikSignIn, FrmKorisnikSignIn);
+  Application.CreateForm(Tdata, data);  //error
+  Application.Run;
+end.
